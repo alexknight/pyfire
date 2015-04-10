@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="section" id="pyzh">
+<span id="index"></span><h1>---------Just for Pythoner---------</h1>
+<div class="section" id="id1">
+<h2>本期主题－2015/4/6</h2>
+<p>Python活动公告栏</p>
+<table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">技术分享报名:</th><td class="field-body"><a class="reference external" href="http://city.oschina.net/shenzhen/event/228050">http://city.oschina.net/shenzhen/event/228050</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Python相关群:</th><td class="field-body">113938272</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">报名联系人:</th><td class="field-body">Alex</td>
+</tr>
+<tr class="field-even field"><th class="field-name">QQ号码/电话号码:</th><td class="field-body">619692290/18922720739</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+{% for article in articles %} 
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="{% url 'pyfire.views.detail' pk=article.pk %}">{{article.title}}</a></li>
+</ul>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+            <div class="cut">***</div>
+          </div>
+       </div>
+     </div>
+  </div>
+   
+  {% endblock content %}
+ 

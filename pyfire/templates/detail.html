@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="date">
+<h1>{{post.title}}</h1>
+	{% if post.published_data %}
+		{{ post.published_data}}
+	{% endif %}
+<p>{{post.text}}</p>
+ {% endblock content %}
